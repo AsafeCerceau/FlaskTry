@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+
+    <form method="POST" action = "">
+        {{ form.hidden_tag() }} <!-- Campo oculto para CSRF token -->
+        {{ form.username }} <!-- Campo para o nome de usuário -->
+        {{ form.password }} <!-- Campo para a senha -->
+        {{ form.submit }} <!-- Botão de envio do formulário -->
+        
+    </form>
+
+    <a href="{{url_for('register')}}">Não tem uma conta? Clique aqui para registrar</a> <!-- Link para registrar caso o usuário não tenha conta -->
+</body>
+</html>
